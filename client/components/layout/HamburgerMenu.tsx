@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 const items = [
  { label: "Home", href: "/#hello" },
  { label: "About", href: "/#about" },
- { label: "Work", href: "/#work" },
+ { label: "Skills", href: "/#skills" },
+ { label: "Works", href: "/#works" },
  { label: "Contact", href: "/#contact" },
 ];
 
@@ -29,7 +30,6 @@ const HamburgerMenu = ({
 
   // ハッシュが存在する場合
   if (hash) {
-   console.log(`ハッシュパス: ${hash}`);
    setPath("/" + hash);
   }
  });

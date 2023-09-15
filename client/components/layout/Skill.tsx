@@ -35,8 +35,8 @@ const items = [
 
 export default function Skill() {
  return (
-  <div className="relative h-screen items-center w-screen flex bg-opacity-100">
-   <div className="p-4 mx-auto w-full max-w-6xl z-20">
+  <div className="h-screen items-center w-screen flex bg-primary">
+   <div className="p-4 mx-auto w-full max-w-6xl">
     <div className="flex flex-col gap-8 md:flex-row ">
      <div className="py-4 w-full">
       <motion.h1

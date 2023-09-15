@@ -37,7 +37,7 @@ const items = [
 
 export default function About() {
  return (
-  <div className="h-screen w-screen flex items-center">
+  <div className="h-screen w-screen flex items-center overflow-auto">
    <Image
     className="absolute h-screen w-full rounded-md"
     src="/images/work.png"
@@ -64,22 +64,22 @@ export default function About() {
       <button className="absolute right-0 rounded-full bg-white/70 border shadow-2xl">
        <MdOutlinePlayArrow className="h-8 w-8 text-primary" />
       </button> */}
-      <ul className="grid grid-rows-3 grid-flow-col md:grid-cols-3 md:grid-rows-2 gap-4 w-full overflow-x-scroll">
+      <ul className="md:grid flex md:grid-cols-3 gap-4 w-full overflow-x-scroll">
        {items.map((item, index) => (
         <li
          key={index}
-         className="border rounded-sm p-2 md:p-4 bg-white text-primary shadow "
+         className="border rounded-md p-4 md:p-4 bg-white text-primary shadow flex-none"
         >
          <div className="mb-2">
-          <p className="">案件名</p>
+          <p className="text-sm font-bold">案件名</p>
           <p className="text-sm">{item.title}</p>
          </div>
          <div className="mb-2">
-          <p className="">業種</p>
+          <p className="text-sm font-bold">業種</p>
           <p className="text-sm">{item.industry}</p>
          </div>
          <div className="mb-2">
-          <p className="">開発言語、フレームワーク</p>
+          <p className="text-sm font-bold">開発言語、フレームワーク</p>
           <p className="text-sm">{item.language}</p>
          </div>
         </li>

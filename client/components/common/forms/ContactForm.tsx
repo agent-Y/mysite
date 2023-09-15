@@ -83,7 +83,7 @@ export default function ContactForm() {
       <TextArea
        {...field}
        placeholder="本文"
-       rows={12} // 必要に応じて行数を調整
+       rows={8} // 必要に応じて行数を調整
        cols={50} // 必要に応じて列数を調整
       />
      )}

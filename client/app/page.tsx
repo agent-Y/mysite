@@ -10,14 +10,13 @@ export default function Home() {
    <div id="hello" className="shrink-0 snap-always snap-start">
     <Hello />
    </div>
-
    <div id="about" className="shrink-0 snap-always snap-start">
     <About />
    </div>
-   <div id="skill" className="shrink-0 snap-always snap-start">
+   <div id="skills" className="shrink-0 snap-always snap-start">
     <Skill />
    </div>
-   <div id="work" className="shrink-0 snap-always snap-start">
+   <div id="works" className="shrink-0 snap-always snap-start">
     <Work />
    </div>
    <div id="contact" className="shrink-0 snap-always snap-start">
