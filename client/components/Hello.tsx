@@ -51,15 +51,15 @@ export default function Hello() {
      animate={{ scale: 1 }}
      transition={{ duration: 0.5 }}
     >
-     Hello
+     Welcome
     </motion.h1>
     <motion.p
-     className="text-2xl font-light dark:text-gray-300"
+     className="text-2xl font-light dark:text-gray-300 text-center"
      initial={{ opacity: 0 }}
      animate={{ opacity: 1 }}
      transition={{ delay: 0.5, duration: 1 }}
     >
-     I'm a full-stack engineer
+     This is Yuki Hashimoto&apos;s portfolio site
     </motion.p>
    </div>
   </div>

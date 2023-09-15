@@ -16,8 +16,8 @@ export default function Navigation() {
  };
 
  return (
-  <nav className="fixed top-0 left-0 px-2 md:px-12 py-4 w-full flex items-center justify-between z-20">
-   <Link className="font-semibold" href={"/"}>
+  <nav className="fixed top-0 left-0 px-2 md:px-12 py-4 w-full flex items-center justify-between z-40">
+   <Link className="text-xl font-semibold text-orange" href={"/"}>
     yuki hashimoto
    </Link>
 

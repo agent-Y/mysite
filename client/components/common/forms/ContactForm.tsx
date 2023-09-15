@@ -1,9 +1,14 @@
-"use client";
+import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import { useState } from "react";
-
 import { Input, TextArea } from "@/components/common/inputs";
 import { SubmitButton } from "../buttons";
+
+interface FormData {
+ name: string;
+ email: string;
+ title: string;
+ body: string;
+}
 
 export default function ContactForm() {
  const {
@@ -11,13 +16,16 @@ export default function ContactForm() {
   handleSubmit,
   formState: { errors },
   control,
- } = useForm();
- const [serverState, setServerState] = useState({
+ } = useForm<FormData>();
+ const [serverState, setServerState] = useState<{
+  submitting: boolean;
+  status: string | null;
+ }>({
   submitting: false,
   status: null,
  });
 
- const handleOnSubmit = async (data) => {
+ const handleOnSubmit = async (data: FormData) => {
   console.log(data);
 
   try {

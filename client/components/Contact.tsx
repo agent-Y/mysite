@@ -5,9 +5,9 @@ import ContactForm from "@/components/common/forms/ContactForm";
 
 export default function Contact() {
  return (
-  <div className="h-screen w-full bg-primary">
-   <div className="p-4 mx-auto max-w-6xl">
-    <div className="py-4">
+  <div className="h-screen items-center w-screen flex bg-primary">
+   <div className="p-4 mx-auto w-full  max-w-6xl">
+    <div className="py-4 ">
      <motion.h1
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       className="text-6xl font-bold text-white "
@@ -18,7 +18,7 @@ export default function Contact() {
     <motion.div
      initial={{ opacity: 0 }}
      whileInView={{ opacity: 1 }}
-     className="rounded-lg bg-white p-4 mx-auto max-w-4xl h-full "
+     className="rounded-lg bg-white p-4 mx-auto max-w-4xl  "
     >
      <ContactForm />
     </motion.div>

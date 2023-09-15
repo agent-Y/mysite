@@ -1,0 +1,89 @@
+"use client";
+import { motion } from "framer-motion";
+
+const items = [
+ {
+  name: "HTML・CSS",
+  percent: 80,
+ },
+ {
+  name: "Tailwind",
+  percent: 80,
+ },
+ {
+  name: "JavaScript・TypeScript",
+  percent: 80,
+ },
+
+ {
+  name: "React",
+  percent: 80,
+ },
+ {
+  name: "Next.JS",
+  percent: 80,
+ },
+ {
+  name: "Python",
+  percent: 90,
+ },
+ {
+  name: "Django・Django restframework",
+  percent: 90,
+ },
+];
+
+export default function Skill() {
+ return (
+  <div className="relative h-screen items-center w-screen flex bg-opacity-100">
+   <div className="p-4 mx-auto w-full max-w-6xl z-20">
+    <div className="flex flex-col gap-8 md:flex-row ">
+     <div className="py-4 w-full">
+      <motion.h1
+       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+       className="text-6xl font-bold text-white "
+      >
+       My Skills
+      </motion.h1>
+      <motion.p
+       className="text-2xl font-light dark:text-gray-300"
+       initial={{ opacity: 0 }}
+       animate={{ opacity: 1 }}
+       transition={{ delay: 0.5, duration: 1 }}
+      >
+       業務フローの自動化、Webサービスの開発など
+      </motion.p>
+     </div>
+     <div className="w-full ">
+      <div className="flex items-center gap-4">
+       <ul className="flex flex-col w-full gap-5">
+        {items.map((item, index) => (
+         <li key={item.name} className="">
+          <h5 className="text-xl font-bold">{item.name}</h5>
+          <div className="relative h-4 rounded-lg border bg-white w-full">
+           <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: `${item.percent}%` }}
+            transition={{ duration: 1.0 }}
+            className="absolute left-0 h-full rounded-lg bg-secondary"
+           />
+          </div>
+         </li>
+        ))}
+       </ul>
+       {/* <h5 className="text-xl font-bold">React</h5>
+       <div className="relative h-4 rounded-lg border bg-white w-full">
+        <motion.div
+         initial={{ width: 0 }}
+         whileInView={{ width: `${}%` }}
+         transition={{ duration: 1.0 }}
+         className="absolute left-0 h-full rounded-lg bg-secondary"
+        />
+       </div> */}
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ );
+}
