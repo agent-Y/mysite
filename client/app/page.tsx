@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import Skill from "@/components/layout/Skill";
+import Portfolio from "@/components/Portfolio";
 
 export default function Home() {
  return (
@@ -18,6 +19,9 @@ export default function Home() {
    </div>
    <div id="works" className="shrink-0 snap-always snap-start">
     <Work />
+   </div>
+   <div id="portfolio" className="shrink-0 snap-always snap-start">
+    <Portfolio />
    </div>
    <div id="contact" className="shrink-0 snap-always snap-start">
     <Contact />

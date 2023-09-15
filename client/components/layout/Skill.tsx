@@ -59,7 +59,7 @@ export default function Skill() {
        <ul className="flex flex-col w-full gap-5">
         {items.map((item, index) => (
          <li key={item.name} className="">
-          <h5 className="text-xl font-bold">{item.name}</h5>
+          <h5 className="md:text-xl font-bold">{item.name}</h5>
           <div className="relative h-4 rounded-lg border bg-white w-full">
            <motion.div
             initial={{ width: 0 }}
