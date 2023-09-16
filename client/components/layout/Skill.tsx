@@ -35,7 +35,7 @@ const items = [
 
 export default function Skill() {
  return (
-  <div className="h-screen items-center w-screen flex bg-primary">
+  <div className="h-screen items-center w-screen flex ">
    <div className="p-4 mx-auto w-full max-w-6xl">
     <div className="flex flex-col gap-8 md:flex-row ">
      <div className="py-4 w-full">
@@ -59,7 +59,7 @@ export default function Skill() {
        <ul className="flex flex-col w-full gap-5">
         {items.map((item, index) => (
          <li key={item.name} className="">
-          <h5 className="md:text-xl font-bold">{item.name}</h5>
+          <h5 className="text-white md:text-xl font-bold">{item.name}</h5>
           <div className="relative h-4 rounded-lg border bg-white w-full">
            <motion.div
             initial={{ width: 0 }}
@@ -71,15 +71,6 @@ export default function Skill() {
          </li>
         ))}
        </ul>
-       {/* <h5 className="text-xl font-bold">React</h5>
-       <div className="relative h-4 rounded-lg border bg-white w-full">
-        <motion.div
-         initial={{ width: 0 }}
-         whileInView={{ width: `${}%` }}
-         transition={{ duration: 1.0 }}
-         className="absolute left-0 h-full rounded-lg bg-secondary"
-        />
-       </div> */}
       </div>
      </div>
     </div>

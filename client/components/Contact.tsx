@@ -2,10 +2,17 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ContactForm from "@/components/common/forms/ContactForm";
+import { useState } from "react";
+import SuccessModal from "@/components/common/modals/SuccessModal";
 
 export default function Contact() {
+ const [success, setSuccess] = useState(false);
+
+ const handleCloseModal = () => {
+  setSuccess(false);
+ };
  return (
-  <div className="h-screen items-center w-screen flex bg-primary">
+  <div className="h-screen items-center w-screen flex">
    <div className="p-4 mx-auto w-full  max-w-6xl">
     <div className="py-4 ">
      <motion.h1
@@ -15,13 +22,17 @@ export default function Contact() {
       Contact
      </motion.h1>
     </div>
-    <motion.div
-     initial={{ opacity: 0 }}
-     whileInView={{ opacity: 1 }}
-     className="rounded-lg bg-white p-4 mx-auto max-w-4xl  "
-    >
-     <ContactForm />
-    </motion.div>
+    {success ? (
+     <SuccessModal handleCloseModal={handleCloseModal} />
+    ) : (
+     <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="rounded-lg bg-white p-4 mx-auto max-w-4xl  "
+     >
+      <ContactForm setSuccess={setSuccess} />
+     </motion.div>
+    )}
    </div>
   </div>
  );

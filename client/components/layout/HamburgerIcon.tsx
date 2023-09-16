@@ -17,7 +17,7 @@ const HamburgerIcon = ({ isOpen }: { isOpen: boolean }) => {
 
  return (
   <svg
-   className="w-8 h-8 text-gray-500"
+   className="w-8 h-8 text-gray"
    fill="none"
    strokeLinecap="round"
    strokeLinejoin="round"

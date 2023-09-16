@@ -38,14 +38,6 @@ const items = [
 export default function About() {
  return (
   <div className="h-screen w-screen flex items-center overflow-auto">
-   <Image
-    className="absolute h-screen w-full rounded-md"
-    src="/images/work.png"
-    alt="work image"
-    width={600}
-    height={600}
-   />
-   <div className="h-full w-full absolute bg-black/80 " />
    <div className="mx-auto w-full max-w-6xl z-20 px-2">
     <motion.h1
      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -64,23 +56,23 @@ export default function About() {
       <button className="absolute right-0 rounded-full bg-white/70 border shadow-2xl">
        <MdOutlinePlayArrow className="h-8 w-8 text-primary" />
       </button> */}
-      <ul className="md:grid flex md:grid-cols-3 gap-4 w-full overflow-x-scroll">
+      <ul className="md:grid flex md:grid-cols-3 gap-4 w-full snap-x overflow-x-auto hidden-scrollbar">
        {items.map((item, index) => (
         <li
          key={index}
-         className="border rounded-md p-4 md:p-4 bg-white text-primary shadow flex-none"
+         className="border shrink-0 snap-center w-80 md:w-full rounded-md p-4 md:p-4 bg-white text-primary shadow flex-none"
         >
          <div className="mb-2">
-          <p className="text-sm font-bold">案件名</p>
-          <p className="text-sm">{item.title}</p>
+          <p className=" font-bold">案件名</p>
+          <p className="text-lg">{item.title}</p>
          </div>
          <div className="mb-2">
-          <p className="text-sm font-bold">業種</p>
-          <p className="text-sm">{item.industry}</p>
+          <p className=" font-bold">業種</p>
+          <p className="text-lg">{item.industry}</p>
          </div>
          <div className="mb-2">
-          <p className="text-sm font-bold">開発言語、フレームワーク</p>
-          <p className="text-sm">{item.language}</p>
+          <p className=" font-bold">開発言語、フレームワーク</p>
+          <p className="text-lg">{item.language}</p>
          </div>
         </li>
        ))}

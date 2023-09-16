@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { Input, TextArea } from "@/components/common/inputs";
 import { SubmitButton } from "../buttons";
@@ -10,7 +10,11 @@ interface FormData {
  body: string;
 }
 
-export default function ContactForm() {
+export default function ContactForm({
+ setSuccess,
+}: {
+ setSuccess: (success: boolean) => void;
+}) {
  const {
   register,
   handleSubmit,
@@ -26,28 +30,25 @@ export default function ContactForm() {
  });
 
  const handleOnSubmit = async (data: FormData) => {
-  console.log(data);
-
+  // フォームのバリデーションエラーがあるかどうかをチェック
+  if (Object.keys(errors).length > 0) {
+   console.log("フォームにエラーがあります:", errors);
+   return;
+  }
+  setServerState({ submitting: true, status: null });
   try {
-   const response = await fetch("/api/contact", {
+   const res = await fetch("/api/contact", {
     method: "POST",
-    headers: {
-     "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
    });
-
-   if (response.ok) {
-    // 成功時の処理
-    setServerState({ submitting: false, status: "Success" });
-   } else {
-    // エラー時の処理
-    setServerState({ submitting: false, status: "Error" });
+   const json = await res.json();
+   setServerState({ submitting: false, status: json.message });
+   if (json.success) {
+    setSuccess(true);
    }
-  } catch (error) {
-   // エラーハンドリング
-   console.error("エラーが発生しました:", error);
-   setServerState({ submitting: false, status: "Error" });
+  } catch (err) {
+   setServerState({ submitting: false, status: "送信に失敗しました。" });
   }
  };
 
@@ -57,38 +58,81 @@ export default function ContactForm() {
     <Controller
      name="name"
      control={control}
+     rules={{ required: "お名前を入力してください。" }}
      render={({ field }) => (
-      <Input {...field} type="text" placeholder="お名前" />
+      <div>
+       <Input
+        {...field}
+        isError={errors.name != undefined}
+        placeholder="お名前"
+       />
+       {errors.name && (
+        <p className="text-red text-sm">{errors.name.message}</p>
+       )}
+      </div>
      )}
     />
     <Controller
      name="email"
      control={control}
+     rules={{
+      required: "メールアドレスを入力してください。",
+      pattern: {
+       value: /^\S+@\S+$/i,
+       message: "有効なメールアドレスを入力してください。",
+      },
+     }}
      render={({ field }) => (
-      <Input {...field} type="email" placeholder="メールアドレス" />
+      <div>
+       <Input
+        {...field}
+        isError={errors.email != undefined}
+        placeholder="メールアドレス"
+       />
+       {errors.email && (
+        <p className="text-red text-sm">{errors.email.message}</p>
+       )}
+      </div>
      )}
     />
     <Controller
      name="title"
      control={control}
+     rules={{ required: "タイトルを入力してください。" }}
      render={({ field }) => (
-      <Input {...field} type="text" placeholder="タイトル" />
+      <div>
+       <Input
+        {...field}
+        isError={errors.title != undefined}
+        placeholder="タイトル"
+       />
+       {errors.title && (
+        <p className="text-red text-sm">{errors.title.message}</p>
+       )}
+      </div>
      )}
     />
 
     <Controller
      name="body"
      control={control}
+     rules={{ required: "本文を入力してください。" }}
      render={({ field }) => (
-      <TextArea
-       {...field}
-       placeholder="本文"
-       rows={8} // 必要に応じて行数を調整
-       cols={50} // 必要に応じて列数を調整
-      />
+      <div>
+       <TextArea
+        {...field}
+        isError={errors.body != undefined}
+        placeholder="本文"
+        rows={8}
+        cols={50}
+       />
+       {errors.body && (
+        <p className="text-red text-sm">{errors.body.message}</p>
+       )}
+      </div>
      )}
     />
-    <SubmitButton />
+    <SubmitButton {...serverState} />
    </div>
   </form>
  );

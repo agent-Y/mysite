@@ -3,11 +3,10 @@ import About from "@/components/About";
 import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import Skill from "@/components/layout/Skill";
-import Portfolio from "@/components/Portfolio";
 
 export default function Home() {
  return (
-  <div className="h-screen w-screen snap-mandatory snap-y overflow-scroll relative">
+  <div className="relative h-screen w-screen">
    <div id="hello" className="shrink-0 snap-always snap-start">
     <Hello />
    </div>
@@ -19,9 +18,6 @@ export default function Home() {
    </div>
    <div id="works" className="shrink-0 snap-always snap-start">
     <Work />
-   </div>
-   <div id="portfolio" className="shrink-0 snap-always snap-start">
-    <Portfolio />
    </div>
    <div id="contact" className="shrink-0 snap-always snap-start">
     <Contact />
