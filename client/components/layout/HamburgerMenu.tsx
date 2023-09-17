@@ -23,7 +23,7 @@ const HamburgerMenu = ({
   closed: { x: "-100%" },
  };
 
- const currentTab = useContext(TabContext);
+ const { currentTab } = useContext(TabContext);
 
  return (
   <motion.div
