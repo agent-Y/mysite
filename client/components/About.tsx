@@ -36,7 +36,7 @@ export default function About() {
       />
      </div>
      <div className="">
-      <p className="text-white font-light  whitespace-pre-line first-letter:text-2xl">
+      <p className="text-white font-light whitespace-pre-line first-letter:text-2xl first-letter:font-extrabold">
        My name is Yuki. I am a freelance and a full-stack developer based in
        Osaka with a passion for building digital services/stuff I want. I have a
        knack for all things launching products, from planning and designing all
@@ -53,15 +53,18 @@ export default function About() {
       transition={{ delay: 0.7, duration: 1 }}
       className="flex flex-col gap-4"
      >
-      <h2 className="text-xl text-white">On the Web</h2>
+      <h2 className="text-xl text-white font-semibold">On the Web</h2>
       <Link
        target="_blank"
        href="https://github.com/agent-y"
-       className="text-white flex items-center pl-8"
+       className="text-white flex items-center pl-8 gap-2"
       >
        <AiFillGithub className="h-10 w-10" />
-       <span className="pl-2">Github</span>
+       <span>Github</span>
       </Link>
+
+      <h2 className="text-xl text-white font-semibold">Likes</h2>
+      <p className="text-white">DTM, Playing Tennis, Traveling, Camping</p>
      </motion.div>
     </motion.div>
    </div>
