@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Favicon from "/public/favicon.ico";
 
 import { Inter } from "next/font/google";
 
@@ -10,7 +11,7 @@ import Wrapper from "@/components/common/Wrapper";
 export const metadata: Metadata = {
  title: "yuki hashimoto",
  description: "yuki hashimoto's portfolio site",
- icons: [{ rel: "icon", url: "/images/profile.png" }],
+ icons: [{ rel: "icon", url: Favicon.src }],
 };
 
 export default function RootLayout({

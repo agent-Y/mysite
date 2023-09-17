@@ -14,7 +14,6 @@ const items = [
   name: "JavaScript・TypeScript",
   percent: 80,
  },
-
  {
   name: "React",
   percent: 80,

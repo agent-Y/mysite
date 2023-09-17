@@ -1,12 +1,18 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { MdOutlinePlayArrow } from "react-icons/md";
+
 const items = [
  {
-  language: "Python Django HTML CSS JavaScript",
-  title: "業務ページ開発",
-  industry: "美容",
+  language:
+   "React Next.JS TypeScript TailwindCSS Django restframework Nginx PostgreSQL Redis",
+  title: "教育支援システム",
+  industry: "教育",
+ },
+ {
+  language:
+   "React Next.JS TypeScript TailwindCSS Django restframework Nginx PostgreSQL",
+  title: "レビューサイト",
+  industry: "飲食",
  },
  {
   language: "Python Django HTML CSS JavaScript",
@@ -14,24 +20,19 @@ const items = [
   industry: "美容",
  },
  {
-  language: "Python Django HTML CSS JavaScript",
-  title: "業務ページ開発",
-  industry: "美容",
+  language: "Python Django HTML CSS JavaScript MYSQL Heroku",
+  title: "旅のしおり作成システム",
+  industry: "旅行",
  },
  {
-  language: "Python Django HTML CSS JavaScript",
-  title: "業務ページ開発",
-  industry: "美容",
+  language: "Python GoogleAppScript",
+  title: "在庫管理システム",
+  industry: "アパレル",
  },
  {
-  language: "Python Django HTML CSS JavaScript",
-  title: "業務ページ開発",
-  industry: "美容",
- },
- {
-  language: "Python Django HTML CSS JavaScript",
-  title: "業務ページ開発",
-  industry: "美容",
+  language: "Python Django HTML CSS JavaScript MYSQL Heroku",
+  title: "ECサイト",
+  industry: "アパレル",
  },
 ];
 
@@ -65,7 +66,7 @@ export default function About() {
        {items.map((item, index) => (
         <li
          key={index}
-         className="border shrink-0 snap-center w-80 md:w-full rounded-md p-4 md:p-4 bg-white text-primary shadow flex-none"
+         className="border shrink-0 snap-center w-80 md:w-full rounded-md p-4 md:p-4 bg-white/90 text-primary shadow-xl flex-none "
         >
          <div className="mb-2">
           <p className=" font-bold">案件名</p>
