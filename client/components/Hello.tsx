@@ -16,10 +16,10 @@ export default function Hello() {
  return (
   <div className="h-screen w-screen flex items-center justify-center flex-col relative">
    <motion.h1
-    className="text-6xl font-bold text-white"
+    className="text-4xl md:text-6xl font-bold text-white"
     initial={{ scale: 0.5 }}
     animate={{ scale: 1 }}
-    transition={{ delay: 2, duration: 2.5 }}
+    transition={{ delay: 1.5, duration: 1.8 }}
    >
     <Typewriter
      onInit={(typewriter) => {

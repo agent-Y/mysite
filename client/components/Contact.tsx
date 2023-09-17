@@ -23,7 +23,7 @@ export default function Contact() {
     <div className="py-4 ">
      <motion.h1
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-      className="text-6xl font-bold text-white "
+      className="text-4xl md:text-6xl font-bold text-white "
      >
       Contact
      </motion.h1>

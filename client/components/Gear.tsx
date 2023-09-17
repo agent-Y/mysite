@@ -6,7 +6,7 @@ export default function Gear() {
   <div className="h-screen w-screen">
    <motion.h1
     whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-    className="text-6xl font-bold tex-white"
+    className="text-4xl md:text-6xl font-bold tex-white"
    >
     My Gears
    </motion.h1>

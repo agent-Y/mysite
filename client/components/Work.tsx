@@ -41,14 +41,19 @@ export default function About() {
    <div className="mx-auto w-full max-w-6xl z-20 px-2">
     <motion.h1
      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-     className="text-6xl font-bold text-white "
+     className="text-4xl md:text-6xl font-bold text-white "
     >
      Current Works
     </motion.h1>
     <p className="text-2xl font-light text-gray-300 ">
      I am a full-stack engineer
     </p>
-    <div className="flex flex-col gap-8 md:flex-row h-full py-8">
+    <motion.div
+     initial={{ opacity: 0 }}
+     whileInView={{ opacity: 1 }}
+     transition={{ delay: 0.5, duration: 1 }}
+     className="flex flex-col gap-8 md:flex-row h-full py-8"
+    >
      <div className=" flex items-center w-full">
       {/* <button className="absolute left-0  rounded-full bg-white/70 border shadow-2xl">
        <MdOutlinePlayArrow className="text-primary h-8 w-8 rotate-180" />
@@ -78,7 +83,7 @@ export default function About() {
        ))}
       </ul>
      </div>
-    </div>
+    </motion.div>
    </div>
   </div>
  );

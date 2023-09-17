@@ -41,7 +41,7 @@ export default function Skill() {
      <div className="py-4 w-full">
       <motion.h1
        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-       className="text-6xl font-bold text-white "
+       className="text-4xl md:text-6xl font-bold text-white "
       >
        My Skills
       </motion.h1>

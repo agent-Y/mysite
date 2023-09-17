@@ -10,6 +10,7 @@ import Wrapper from "@/components/common/Wrapper";
 export const metadata: Metadata = {
  title: "yuki hashimoto",
  description: "yuki hashimoto's portfolio site",
+ icons: [{ rel: "icon", url: "/images/profile.png" }],
 };
 
 export default function RootLayout({
