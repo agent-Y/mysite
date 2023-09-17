@@ -20,7 +20,7 @@ export default function Hello() {
     className="text-4xl md:text-6xl font-bold text-white"
     initial={{ scale: 0.5 }}
     animate={{ scale: 1 }}
-    transition={{ delay: 1.5, duration: 1.8 }}
+    transition={{ delay: 1, duration: 1.2 }}
    >
     <Typewriter
      onInit={(typewriter) => {

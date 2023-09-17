@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import Skill from "@/components/layout/Skill";
 import { useInView } from "react-intersection-observer";
 import Navigation from "@/components/layout/Navigation";
+import TabContext from "@/context/TabContext";
 const sections = [
  { id: "hello", component: <Hello /> },
  { id: "about", component: <About /> },
@@ -15,10 +16,6 @@ const sections = [
  { id: "works", component: <Work /> },
  { id: "contact", component: <Contact /> },
 ];
-
-export const TabContext = createContext({
- currentTab: "",
-});
 
 export default function Home() {
  const router = useRouter();

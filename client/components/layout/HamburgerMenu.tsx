@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useEffect, useState, useContext } from "react";
-import { TabContext } from "@/app/page";
+import { useContext } from "react";
+import TabContext from "@/context/TabContext";
 const items = [
  { label: "Home", href: "/#hello" },
  { label: "About", href: "/#about" },
@@ -23,7 +23,7 @@ const HamburgerMenu = ({
   closed: { x: "-100%" },
  };
 
- const { currentTab } = useContext(TabContext);
+ const currentTab = useContext(TabContext);
 
  return (
   <motion.div
