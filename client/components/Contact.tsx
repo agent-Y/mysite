@@ -41,7 +41,7 @@ export default function Contact() {
      </motion.div>
     )}
    </div>
-   <div className="absolute w-full bottom-0 py-4 text-center">
+   <div className="absolute w-full bottom-4 text-center">
     <p className="text-white text-sm">
      © 2023 Yuki Hashimoto. All Rights Reserved.
     </p>
