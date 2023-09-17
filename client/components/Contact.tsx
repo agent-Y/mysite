@@ -5,6 +5,12 @@ import ContactForm from "@/components/common/forms/ContactForm";
 import { useState } from "react";
 import SuccessModal from "@/components/common/modals/SuccessModal";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+ title: "Contact Page - yuki hashimoto",
+};
+
 export default function Contact() {
  const [success, setSuccess] = useState(false);
 
