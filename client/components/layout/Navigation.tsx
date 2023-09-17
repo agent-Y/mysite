@@ -16,7 +16,7 @@ export default function Navigation() {
  };
 
  return (
-  <nav className="fixed top-0 left-0 px-2 md:px-12 py-4 w-full flex items-center justify-between z-40">
+  <nav className="fixed top-0 left-0 px-2 md:px-12 py-4 w-full flex items-center justify-between z-40 bg-primary/5">
    <Link className="text-xl font-semibold text-secondary" href={"/"}>
     Yuki Hashimoto
    </Link>

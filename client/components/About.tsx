@@ -55,6 +55,7 @@ export default function About() {
      >
       <h2 className="text-xl text-white">On the Web</h2>
       <Link
+       target="_blank"
        href="https://github.com/agent-y"
        className="text-white flex items-center pl-8"
       >
