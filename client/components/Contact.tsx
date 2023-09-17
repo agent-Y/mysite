@@ -18,7 +18,7 @@ export default function Contact() {
   setSuccess(false);
  };
  return (
-  <div className="h-screen w-screen relative items-center flex">
+  <div className="h-screen w-full  items-center flex">
    <div className="p-4 mx-auto w-full max-w-6xl">
     <div className="py-4 ">
      <motion.h1
@@ -41,8 +41,8 @@ export default function Contact() {
      </motion.div>
     )}
    </div>
-   <div className="absolute w-full bottom-4 text-center">
-    <p className="text-white text-sm">
+   <div className="bottom-4 absolute w-full text-center">
+    <p className="text-white text-xs md:text-sm">
      © 2023 Yuki Hashimoto. All Rights Reserved.
     </p>
    </div>

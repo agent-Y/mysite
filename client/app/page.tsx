@@ -40,7 +40,7 @@ export default function Home() {
       key={section.id}
       ref={inViewRefs[index][0]}
       id={section.id}
-      className="shrink-0 snap-always snap-start h-screen"
+      className="shrink-0 snap-always snap-start h-screen relative"
      >
       {section.component}
      </div>
