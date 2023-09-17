@@ -36,7 +36,7 @@ export default function About() {
       />
      </div>
      <div className="">
-      <p className="text-white font-light whitespace-pre-line first-letter:text-2xl first-letter:font-extrabold">
+      <p className="text-sm md:text-base text-white font-light whitespace-pre-line first-letter:text-2xl first-letter:font-extrabold">
        {`My name is Yuki. I am a freelance full-stack developer based in Osaka with a passion for building digital services and products. I have a knack for all things related to launching products, from planning and designing to solving real-life problems with code. 
        I started studying programming to automate inventory management for a used clothing sales business I was involved in during my university days. I even developed and sold tools for that
        purpose. When I'm not online, I enjoy making my own music and DJing.`}
@@ -54,12 +54,14 @@ export default function About() {
        href="https://github.com/agent-y"
        className="text-white flex items-center pl-8 gap-2"
       >
-       <AiFillGithub className="h-10 w-10" />
-       <span>Github</span>
+       <AiFillGithub className="md:h-10 md:w-10 h-6 w-6" />
+       <span className="text-sm md:text-base">Github</span>
       </Link>
 
       <h2 className="text-xl text-white font-semibold">Likes</h2>
-      <p className="text-white">DTM, Playing Tennis, Traveling, Camping</p>
+      <p className="text-white text-sm pl-8">
+       DTM, Playing Tennis, Traveling, Camping
+      </p>
      </motion.div>
     </motion.div>
    </div>

@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 
 const items = [
  {
+  language: "Python Django restframework ChatGPT API",
+  title: "ChatGPT api を利用したビデオの文字起こし、翻訳ツール",
+  industry: "",
+ },
+ {
   language:
    "React Next.JS TypeScript TailwindCSS Django restframework Nginx PostgreSQL Redis",
   title: "教育支援システム",
@@ -13,11 +18,6 @@ const items = [
    "React Next.JS TypeScript TailwindCSS Django restframework Nginx PostgreSQL",
   title: "レビューサイト",
   industry: "飲食",
- },
- {
-  language: "Python Django HTML CSS JavaScript",
-  title: "業務ページ開発",
-  industry: "美容",
  },
  {
   language: "Python Django HTML CSS JavaScript MYSQL Heroku",
@@ -72,10 +72,13 @@ export default function About() {
           <p className=" font-bold">案件名</p>
           <p className="text-lg">{item.title}</p>
          </div>
-         <div className="mb-2">
-          <p className=" font-bold">業種</p>
-          <p className="text-lg">{item.industry}</p>
-         </div>
+         {item.industry && (
+          <div className="mb-2">
+           <p className=" font-bold">業種</p>
+           <p className="text-lg">{item.industry}</p>
+          </div>
+         )}
+
          <div className="mb-2">
           <p className=" font-bold">開発言語、フレームワーク</p>
           <p className="text-lg">{item.language}</p>
