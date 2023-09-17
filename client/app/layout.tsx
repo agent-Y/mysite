@@ -1,17 +1,15 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Favicon from "/public/favicon.ico";
 
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
-import Navigation from "@/components/layout/Navigation";
+
 import Wrapper from "@/components/common/Wrapper";
 
 export const metadata: Metadata = {
  title: "yuki hashimoto",
  description: "yuki hashimoto's portfolio site",
- icons: [{ rel: "icon", url: Favicon.src }],
 };
 
 export default function RootLayout({
@@ -22,7 +20,6 @@ export default function RootLayout({
  return (
   <html lang="ja">
    <body className={inter.className}>
-    <Navigation />
     <Wrapper>{children}</Wrapper>
    </body>
   </html>

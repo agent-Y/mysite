@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useContext } from "react";
+import { TabContext } from "@/app/page";
 const items = [
  { label: "Home", href: "/#hello" },
  { label: "About", href: "/#about" },
@@ -22,17 +22,8 @@ const HamburgerMenu = ({
   open: { x: 0 },
   closed: { x: "-100%" },
  };
- const [path, setPath] = useState("/");
 
- useEffect(() => {
-  // ハッシュ部分を取得
-  const hash = window.location.hash;
-
-  // ハッシュが存在する場合
-  if (hash) {
-   setPath("/" + hash);
-  }
- });
+ const { currentTab } = useContext(TabContext);
 
  return (
   <motion.div
@@ -50,7 +41,9 @@ const HamburgerMenu = ({
       className="w-full py-4 text-center "
       href={href}
      >
-      <li className={`text-2xl ${path === href ? "text-orange" : ""}`}>
+      <li
+       className={`text-2xl ${"/#" + currentTab === href ? "text-orange" : ""}`}
+      >
        {label}
       </li>
      </Link>

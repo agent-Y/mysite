@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 
 export default function Hello() {
  const router = useRouter();
+
  return (
   <div className="h-screen w-screen flex items-center justify-center flex-col relative">
    <motion.h1
