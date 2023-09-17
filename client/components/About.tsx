@@ -42,27 +42,33 @@ export default function About() {
        purpose. When I'm not online, I enjoy making my own music and DJing.`}
       </p>
      </div>
-     <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.7, duration: 1 }}
-      className="flex flex-col gap-4"
-     >
-      <h2 className="text-xl text-white font-semibold">On the Web</h2>
-      <Link
-       target="_blank"
-       href="https://github.com/agent-y"
-       className="text-white flex items-center pl-8 gap-2"
+     <div className="flex flex-col gap-4">
+      <motion.div
+       initial={{ opacity: 0, x: -10 }}
+       whileInView={{ opacity: 1, x: 0 }}
+       transition={{ delay: 0.7, duration: 1 }}
       >
-       <AiFillGithub className="md:h-10 md:w-10 h-6 w-6" />
-       <span className="text-sm md:text-base">Github</span>
-      </Link>
-
-      <h2 className="text-xl text-white font-semibold">Likes</h2>
-      <p className="text-white text-sm pl-8">
-       DTM, Playing Tennis, Traveling, Camping
-      </p>
-     </motion.div>
+       <h2 className="text-xl text-white font-semibold">On the Web</h2>
+       <Link
+        target="_blank"
+        href="https://github.com/agent-y"
+        className="text-white flex items-center pl-8 gap-2"
+       >
+        <AiFillGithub className="md:h-10 md:w-10 h-6 w-6" />
+        <span className="text-sm md:text-base">Github</span>
+       </Link>
+      </motion.div>
+      <motion.div
+       initial={{ opacity: 0, x: -10 }}
+       whileInView={{ opacity: 1, x: 0 }}
+       transition={{ delay: 0.9, duration: 1 }}
+      >
+       <h2 className="text-xl text-white font-semibold">Likes</h2>
+       <p className="text-white text-sm pl-8">
+        DTM, Playing Tennis, Traveling, Camping
+       </p>
+      </motion.div>
+     </div>
     </motion.div>
    </div>
   </div>

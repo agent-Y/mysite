@@ -29,7 +29,7 @@ export default function Hello() {
     />
    </motion.h1>
    <motion.p
-    className="text-2xl text-white font-light dark:text-gray-300 text-center"
+    className="text-xl md:text-2xl text-white font-light dark:text-gray-300 text-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ delay: 2.5, duration: 3.5 }}
