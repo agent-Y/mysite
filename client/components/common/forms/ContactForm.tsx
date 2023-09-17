@@ -36,15 +36,20 @@ export default function ContactForm({
    return;
   }
   setServerState({ submitting: true, status: null });
+  console.log(data);
   try {
-   const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-   });
+   const res = await fetch(
+    `${process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT_URL}`,
+    {
+     method: "POST",
+     headers: { "Content-Type": "application/json" },
+     body: JSON.stringify(data),
+    }
+   );
    const json = await res.json();
+
    setServerState({ submitting: false, status: json.message });
-   if (json.success) {
+   if (json.ok) {
     setSuccess(true);
    }
   } catch (err) {
