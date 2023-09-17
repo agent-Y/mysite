@@ -20,7 +20,12 @@ export default function About() {
     >
      About
     </motion.h1>
-    <div className="max-w-2xl mx-auto flex flex-col gap-8">
+    <motion.div
+     initial={{ opacity: 0 }}
+     whileInView={{ opacity: 1 }}
+     transition={{ delay: 0.5, duration: 1 }}
+     className="max-w-2xl mx-auto flex flex-col gap-8"
+    >
      <div className="rounded-full flex justify-center md:justify-start ">
       <Image
        src="/images/profile.png"
@@ -31,12 +36,7 @@ export default function About() {
       />
      </div>
      <div className="">
-      <motion.p
-       className="text-white font-light  whitespace-pre-line first-letter:text-2xl"
-       initial={{ opacity: 0 }}
-       whileInView={{ opacity: 1 }}
-       transition={{ delay: 0.5, duration: 1 }}
-      >
+      <p className="text-white font-light  whitespace-pre-line first-letter:text-2xl">
        My name is Yuki. I am a freelance and a full-stack developer based in
        Osaka with a passion for building digital services/stuff I want. I have a
        knack for all things launching products, from planning and designing all
@@ -45,7 +45,7 @@ export default function About() {
        of the used clothing sales, which I had done while in college, and sold
        tools to do so.
        <br /> When not online, I like to make my own music and DJ.
-      </motion.p>
+      </p>
      </div>
      <motion.div
       initial={{ opacity: 0, x: -10 }}
@@ -63,7 +63,7 @@ export default function About() {
        <span className="pl-2">Github</span>
       </Link>
      </motion.div>
-    </div>
+    </motion.div>
    </div>
   </div>
  );
