@@ -5,7 +5,6 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 import Navigation from "@/components/layout/Navigation";
-import Footer from "@/components/layout/Footer";
 import Wrapper from "@/components/common/Wrapper";
 
 export const metadata: Metadata = {
@@ -19,11 +18,10 @@ export default function RootLayout({
  children: React.ReactNode;
 }) {
  return (
-  <html lang="en">
+  <html lang="ja">
    <body className={inter.className}>
     <Navigation />
     <Wrapper>{children}</Wrapper>
-    <Footer />
    </body>
   </html>
  );

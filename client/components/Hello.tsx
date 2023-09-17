@@ -3,6 +3,13 @@
 import { motion } from "framer-motion";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import Typewriter from "typewriter-effect";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+ title: "Hello - yuki hashimoto",
+};
 
 export default function Hello() {
  const router = useRouter();
@@ -12,15 +19,19 @@ export default function Hello() {
     className="text-6xl font-bold text-white"
     initial={{ scale: 0.5 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 0.5 }}
+    transition={{ delay: 2, duration: 2.5 }}
    >
-    Welcome
+    <Typewriter
+     onInit={(typewriter) => {
+      typewriter.typeString("Welcome").start();
+     }}
+    />
    </motion.h1>
    <motion.p
     className="text-2xl text-white font-light dark:text-gray-300 text-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    transition={{ delay: 0.5, duration: 1 }}
+    transition={{ delay: 2.5, duration: 3.5 }}
    >
     This is Yuki Hashimoto&apos;s portfolio site
    </motion.p>

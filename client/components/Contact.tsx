@@ -8,7 +8,7 @@ import SuccessModal from "@/components/common/modals/SuccessModal";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
- title: "Contact Page - yuki hashimoto",
+ title: "Contact - yuki hashimoto",
 };
 
 export default function Contact() {
@@ -18,8 +18,8 @@ export default function Contact() {
   setSuccess(false);
  };
  return (
-  <div className="h-screen items-center w-screen flex">
-   <div className="p-4 mx-auto w-full  max-w-6xl">
+  <div className="h-screen w-screen relative items-center flex">
+   <div className="p-4 mx-auto w-full max-w-6xl">
     <div className="py-4 ">
      <motion.h1
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -34,11 +34,17 @@ export default function Contact() {
      <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.5, duration: 1 }}
       className="rounded-lg bg-white p-4 mx-auto max-w-4xl  "
      >
       <ContactForm setSuccess={setSuccess} />
      </motion.div>
     )}
+   </div>
+   <div className="absolute w-full bottom-0 py-4 text-center">
+    <p className="text-white text-sm">
+     © 2023 Yuki Hashimoto. All Rights Reserved.
+    </p>
    </div>
   </div>
  );

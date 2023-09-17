@@ -10,7 +10,7 @@ export const Input = ({ isError, ...props }: InputProps) => {
   <div className="relative flex items-center">
    <input
     {...props}
-    className={`w-full relative text-primary p-4 outline-none border-b text-sm md:text-base ${
+    className={`w-full relative text-primary p-2 md:p-4 outline-none border-b text-sm md:text-base ${
      isError ? "border-red border-b-2" : ""
     }`}
    />

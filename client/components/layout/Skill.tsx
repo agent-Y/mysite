@@ -46,7 +46,7 @@ export default function Skill() {
        My Skills
       </motion.h1>
       <motion.p
-       className="text-2xl font-light dark:text-gray-300"
+       className="text-2xl font-light dark:text-gray"
        initial={{ opacity: 0 }}
        animate={{ opacity: 1 }}
        transition={{ delay: 0.5, duration: 1 }}
@@ -55,10 +55,15 @@ export default function Skill() {
       </motion.p>
      </div>
      <div className="w-full ">
-      <div className="flex items-center gap-4">
+      <motion.div
+       initial={{ opacity: 0 }}
+       whileInView={{ opacity: 1 }}
+       transition={{ delay: 0.5, duration: 1 }}
+       className="flex items-center gap-4"
+      >
        <ul className="flex flex-col w-full gap-5">
         {items.map((item, index) => (
-         <li key={item.name} className="">
+         <li key={index} className="">
           <h5 className="text-white md:text-xl font-bold">{item.name}</h5>
           <div className="relative h-4 rounded-lg border bg-white w-full">
            <motion.div
@@ -71,7 +76,7 @@ export default function Skill() {
          </li>
         ))}
        </ul>
-      </div>
+      </motion.div>
      </div>
     </div>
    </div>
