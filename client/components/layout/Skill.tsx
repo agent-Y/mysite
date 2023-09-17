@@ -50,7 +50,7 @@ export default function Skill() {
        animate={{ opacity: 1 }}
        transition={{ delay: 0.5, duration: 1 }}
       >
-       業務フローの自動化、Webサービスの開発など
+       {/* 業務フローの自動化、Webサービスの開発など */}
       </motion.p>
      </div>
      <div className="w-full ">

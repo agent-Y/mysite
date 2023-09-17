@@ -16,7 +16,7 @@ export default function About() {
    <div className="mx-auto max-w-6xl w-full ">
     <motion.h1
      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-     className="text-4xl md:text-6xl font-bold text-white pb-4"
+     className="text-6xl font-bold text-white pb-4"
     >
      About
     </motion.h1>
@@ -37,14 +37,9 @@ export default function About() {
      </div>
      <div className="">
       <p className="text-white font-light whitespace-pre-line first-letter:text-2xl first-letter:font-extrabold">
-       My name is Yuki. I am a freelance and a full-stack developer based in
-       Osaka with a passion for building digital services/stuff I want. I have a
-       knack for all things launching products, from planning and designing all
-       the way to solving real-life problems with code.
-       <br />I started studying programming to automate the inventory management
-       of the used clothing sales, which I had done while in college, and sold
-       tools to do so.
-       <br /> When not online, I like to make my own music and DJ.
+       {`My name is Yuki. I am a freelance full-stack developer based in Osaka with a passion for building digital services and products. I have a knack for all things related to launching products, from planning and designing to solving real-life problems with code. 
+       I started studying programming to automate inventory management for a used clothing sales business I was involved in during my university days. I even developed and sold tools for that
+       purpose. When I'm not online, I enjoy making my own music and DJing.`}
       </p>
      </div>
      <motion.div

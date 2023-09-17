@@ -46,8 +46,8 @@ export default function About() {
     >
      Current Works
     </motion.h1>
-    <p className="text-2xl font-light text-gray-300 ">
-     I am a full-stack engineer
+    <p className="text-xl font-light text-gray ">
+     業務フローの自動化、Webサービスの開発、HP作成など
     </p>
     <motion.div
      initial={{ opacity: 0 }}
