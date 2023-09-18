@@ -1,10 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-
+import { MdOutlineWork } from "react-icons/md";
+import { BiSolidBusiness } from "react-icons/bi";
+import { BsLaptopFill } from "react-icons/bs";
 const items = [
  {
-  language: "Python Django restframework ChatGPT API",
-  title: "ChatGPT api を利用したビデオの文字起こし、翻訳ツール",
+  language: "NEXT.JS TypeScript RadixUI Python ChatGPT API",
+  title: "ChatGPT APIを利用したビデオの文字起こし&翻訳ツール",
   industry: "",
  },
  {
@@ -66,22 +68,31 @@ export default function About() {
        {items.map((item, index) => (
         <li
          key={index}
-         className="border shrink-0 snap-center w-80 md:w-full rounded-md p-4 md:p-4 bg-white/90 text-primary shadow-xl flex-none "
+         className=" shrink-0 snap-center w-80 md:w-full rounded-md p-4 md:p-4 bg-secondary/60 text-white shadow-xl flex-none "
         >
          <div className="mb-2">
-          <p className=" font-bold">案件名</p>
-          <p className="text-lg">{item.title}</p>
+          <p className="flex items-center font-bold">
+           <MdOutlineWork className="mr-2" />
+           案件名
+          </p>
+          <p className="">{item.title}</p>
          </div>
          {item.industry && (
           <div className="mb-2">
-           <p className=" font-bold">業種</p>
-           <p className="text-lg">{item.industry}</p>
+           <p className=" font-bold flex">
+            <BiSolidBusiness className="mr-2" />
+            業種
+           </p>
+           <p className="">{item.industry}</p>
           </div>
          )}
 
-         <div className="mb-2">
-          <p className=" font-bold">開発言語、フレームワーク</p>
-          <p className="text-lg">{item.language}</p>
+         <div className="mb-2 ">
+          <p className=" font-bold flex items-center">
+           <BsLaptopFill className="mr-2 " color="white" />
+           開発言語、フレームワーク
+          </p>
+          <p className=" ">{item.language}</p>
          </div>
         </li>
        ))}

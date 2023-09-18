@@ -10,7 +10,7 @@ export const Input = ({ isError, ...props }: InputProps) => {
   <div className="relative flex items-center">
    <input
     {...props}
-    className={`w-full relative text-primary p-2 md:p-4 outline-none border-b border-gray text-sm md:text-base ${
+    className={`w-full relative text-primary p-2 md:p-4 outline-none border-b border-gray text-sm md:text-base rounded-md ${
      isError ? "border-red border-b-2" : ""
     }`}
    />
@@ -32,7 +32,7 @@ export const TextArea = ({ isError, ...props }: TextAreaProps) => {
   <div className="relative flex">
    <textarea
     {...props}
-    className={`w-full text-primary border-gray p-2 md:p-4 outline-none text-sm md:text-base ${
+    className={`w-full text-primary border-gray p-2 md:p-4 outline-none text-sm md:text-base rounded-md ${
      isError ? "border-b-2 border-red" : ""
     }`}
    />

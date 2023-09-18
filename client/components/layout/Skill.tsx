@@ -64,11 +64,11 @@ export default function Skill() {
         {items.map((item, index) => (
          <li key={index} className="">
           <h5 className="text-white md:text-xl font-bold">{item.name}</h5>
-          <div className="relative h-4 rounded-lg border bg-white w-full">
+          <div className="relative h-2 md:h-4 rounded-lg border bg-primary w-full">
            <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: `${item.percent}%` }}
-            transition={{ duration: 1.0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
             className="absolute left-0 h-full rounded-lg bg-secondary"
            />
           </div>

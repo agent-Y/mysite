@@ -35,7 +35,7 @@ export default function Contact() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.5, duration: 1 }}
-      className="rounded-lg bg-white p-4 mx-auto max-w-4xl  "
+      className="rounded-lg bg-white/60 p-4 mx-auto max-w-4xl  "
      >
       <ContactForm setSuccess={setSuccess} />
      </motion.div>
