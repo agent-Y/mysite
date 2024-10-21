@@ -1,8 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
-const items = [
+const APPS = [
   {
     name: "セルフィッシュ",
     image: "/images/services/sel-fish.png",
@@ -43,29 +44,31 @@ export default function Apps() {
           className="flex flex-col gap-8 md:flex-row h-full py-8"
         >
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto">
-            {items.map((item, index) => (
+            {APPS.map((app, index) => (
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.5 + index * 0.5, duration: 1 }}
-                key={item.name}
+                key={app.name}
                 className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-white/70 hover:bg-white/80 transition-all duration-300 ease-in-out"
               >
-                <div className="flex flex-col items-center justify-center gap-2 w-full">
-                  <div className="p-2 rounded-full bg-white">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={100}
-                      height={100}
-                      className="rounded-full"
-                    />
+                <Link href={`${app.link}`}>
+                  <div className="flex flex-col items-center justify-center gap-2 w-full">
+                    <div className="p-2 rounded-full bg-white">
+                      <Image
+                        src={app.image}
+                        alt={app.name}
+                        width={100}
+                        height={100}
+                        className="rounded-full"
+                      />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <p className="text-lg font-bold">{app.name}</p>
+                    </div>
+                    <p className="text-xs text-gray">{app.description}</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <p className="text-lg font-bold">{item.name}</p>
-                  </div>
-                  <p className="text-sm text-gray">{item.description}</p>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>

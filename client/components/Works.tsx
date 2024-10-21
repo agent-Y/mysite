@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { MdOutlineWork } from "react-icons/md";
 import { BiSolidBusiness } from "react-icons/bi";
 import { BsLaptopFill } from "react-icons/bs";
-const items = [
+const ITEMS = [
   {
     language: "NEXT.JS TypeScript RadixUI Python ChatGPT API",
     title: "ChatGPT APIを利用したビデオの文字起こし&翻訳ツール",
@@ -65,7 +65,7 @@ export default function Works() {
        <MdOutlinePlayArrow className="h-8 w-8 text-primary" />
       </button> */}
             <ul className="md:grid flex md:grid-cols-3 gap-4 w-full snap-x overflow-x-auto hidden-scrollbar">
-              {items.map((item, index) => (
+              {ITEMS.map((item, index) => (
                 <li
                   key={index}
                   className=" shrink-0 snap-center w-80 md:w-full rounded-md p-4 md:p-4 bg-secondary/60 text-white shadow-xl flex-none "
