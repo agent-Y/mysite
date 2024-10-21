@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -10,6 +10,7 @@ import { useInView } from "react-intersection-observer";
 import Navigation from "@/components/layout/Navigation";
 import TabContext from "@/context/TabContext";
 import Apps from "@/components/Apps";
+
 const sections = [
   { id: "hello", component: <Hero /> },
   { id: "about", component: <About /> },
@@ -22,32 +23,34 @@ const sections = [
 export default function Home() {
   const router = useRouter();
   const [currentTab, setCurrentTab] = useState("");
-  const inViewRefs = sections.map(() => useInView({ threshold: 1 }));
 
-  useEffect(() => {
-    inViewRefs;
-    const index = inViewRefs.findIndex((ref) => ref.inView);
-    {
-      index >= 0 && setCurrentTab(sections[index].id),
-        router.push(`/#${currentTab}`);
-    }
-  }, [inViewRefs]);
+  // フックをトップレベルで呼び出し
+  // const inViewRefs = sections.map(() => useInView({ threshold: 1 }));
+
+  // useEffect(() => {
+  //   const index = inViewRefs.findIndex((ref) => ref[1].inView); // ref[1]がinViewの状態
+  //   if (index >= 0) {
+  //     const newTab = sections[index].id;
+  //     setCurrentTab(newTab);
+  //     router.push(`/#${newTab}`);
+  //   }
+  // }, [inViewRefs, router]); // routerを依存配列に追加
 
   return (
-    <TabContext.Provider value={{ currentTab }}>
-      <div className="relative h-screen w-screen">
-        <Navigation />
-        {sections.map((section, index) => (
-          <div
-            key={section.id}
-            ref={inViewRefs[index][0]}
-            id={section.id}
-            className="shrink-0 snap-always snap-start h-screen relative"
-          >
-            {section.component}
-          </div>
-        ))}
-      </div>
-    </TabContext.Provider>
+    // <TabContext.Provider value={{ currentTab }}>
+    <div className="relative h-screen w-screen">
+      <Navigation />
+      {sections.map((section, index) => (
+        <div
+          key={section.id}
+          // ref={inViewRefs[index][0]} // ref[0]が要素の参照
+          id={section.id}
+          className="shrink-0 snap-always snap-start h-screen relative"
+        >
+          {section.component}
+        </div>
+      ))}
+    </div>
+    // </TabContext.Provider>
   );
 }
