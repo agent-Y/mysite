@@ -17,9 +17,9 @@ export default function Hero() {
   return (
     <div className="h-screen w-screen flex items-center justify-center flex-col relative">
       <motion.h1
-        className="text-4xl md:text-6xl font-bold text-white"
-        initial={{ scale: 0.5 }}
-        animate={{ scale: 1 }}
+        className="text-5xl md:text-6xl font-bold text-white"
+        initial={{ y: 20 }}
+        animate={{ y: 0 }}
         transition={{ delay: 1, duration: 1.2 }}
       >
         <Typewriter

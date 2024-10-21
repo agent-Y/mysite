@@ -21,13 +21,6 @@ export default function Navigation() {
         className="text-sm font-semibold text-secondary items-center flex "
         href={"/"}
       >
-        <Image
-          src="/logo.png"
-          width={30}
-          height={30}
-          alt="logo"
-          className="rounded-full mr-2"
-        />
         Yuki Hashimoto
       </Link>
 
