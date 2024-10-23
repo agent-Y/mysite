@@ -7,14 +7,14 @@ const APPS = [
   {
     name: "セルフィッシュ",
     image: "/images/services/sel-fish.png",
-    link: "https://sel-fish.com/",
+    link: "https:/www.sel-fish.com/",
     description: "バス釣りに特化したポータルサイト",
   },
   {
-    name: "ジロウタベタイ",
+    name: "二郎クエスト",
     image: "/images/services/jiro-tabetai.png",
-    link: "https://jiro-tabetai.com/",
-    description: "二郎系ラーメンに特化したポータルサイト",
+    link: "https://www.jiro.quest/",
+    description: "二郎系ラーメンに特化したレビューサイト",
   },
   {
     name: "カダイチャット",
