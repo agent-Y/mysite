@@ -18,8 +18,8 @@ const APPS = [
   },
   {
     name: "カダイチャット",
-    image: "",
-    link: "https://kadaichat.com/",
+    image: "/images/services/kadaichat.png",
+    link: "https://kadaichat.vercel.app/",
     description: "講義中にリアルタイムで質問できるアプリ",
   },
 ];
