@@ -45,14 +45,13 @@ export default function Apps() {
         >
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto">
             {APPS.map((app, index) => (
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.5 + index * 0.5, duration: 1 }}
-                key={app.name}
-                className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-white/70 hover:bg-white/80 transition-all duration-300 ease-in-out"
-              >
-                <Link href={`${app.link}`}>
+              <Link href={`${app.link}`} key={app.name}>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.5 + index * 0.5, duration: 1 }}
+                  className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-white/70 hover:bg-white/80 transition-all duration-300 ease-in-out"
+                >
                   <div className="flex flex-col items-center justify-center gap-2 w-full">
                     <div className="p-2 rounded-full bg-white">
                       <Image
@@ -68,8 +67,8 @@ export default function Apps() {
                     </div>
                     <p className="text-xs text-gray">{app.description}</p>
                   </div>
-                </Link>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </motion.div>

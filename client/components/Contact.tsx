@@ -8,7 +8,7 @@ import SuccessModal from "@/components/common/modals/SuccessModal";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact - yuki hashimoto",
+  title: "Contact - yuki hashimoto"
 };
 
 export default function Contact() {

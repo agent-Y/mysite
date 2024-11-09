@@ -57,18 +57,12 @@ export default function Works() {
           transition={{ delay: 0.5, duration: 1 }}
           className="flex flex-col gap-8 md:flex-row h-full py-8"
         >
-          <div className=" flex items-center w-full">
-            {/* <button className="absolute left-0  rounded-full bg-white/70 border shadow-2xl">
-       <MdOutlinePlayArrow className="text-primary h-8 w-8 rotate-180" />
-      </button>
-      <button className="absolute right-0 rounded-full bg-white/70 border shadow-2xl">
-       <MdOutlinePlayArrow className="h-8 w-8 text-primary" />
-      </button> */}
+          <div className="flex items-center w-full">
             <ul className="md:grid flex md:grid-cols-3 gap-4 w-full snap-x overflow-x-auto hidden-scrollbar">
               {ITEMS.map((item, index) => (
                 <li
-                  key={index}
-                  className=" shrink-0 snap-center w-80 md:w-full rounded-md p-4 md:p-4 bg-secondary/60 text-white shadow-xl flex-none "
+                  key={item.title}
+                  className=" shrink-0 snap-center md:h-auto w-80 md:w-full rounded-md p-4 md:p-4 bg-secondary/60 text-white shadow-xl flex-none "
                 >
                   <div className="mb-2">
                     <p className="flex items-center font-bold">

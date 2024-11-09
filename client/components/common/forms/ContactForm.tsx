@@ -58,7 +58,7 @@ export default function ContactForm({
  };
 
  return (
-  <form onSubmit={handleSubmit(handleOnSubmit)}>
+  (<form onSubmit={handleSubmit(handleOnSubmit)}>
    <div className="flex flex-col gap-4">
     <Controller
      name="name"
@@ -139,6 +139,6 @@ export default function ContactForm({
     />
     <SubmitButton {...serverState} />
    </div>
-  </form>
+  </form>)
  );
 }

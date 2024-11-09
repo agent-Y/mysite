@@ -1,30 +1,31 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useContext } from "react";
-import TabContext from "@/context/TabContext";
+
 const items = [
-  { label: "Home", href: "/#hello" },
-  { label: "About", href: "/#about" },
-  { label: "Skills", href: "/#skills" },
-  { label: "Apps", href: "/#apps" },
-  { label: "Works", href: "/#works" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Home", section: "hello" },
+  { label: "About", section: "about" },
+  { label: "Skills", section: "skills" },
+  { label: "Apps", section: "apps" },
+  { label: "Works", section: "works" },
+  { label: "Contact", section: "contact" },
 ];
 
 const HamburgerMenu = ({
+  currentSection,
   isOpen,
   toggleMenu,
+  onNavClick,
 }: {
+  currentSection: string;
   isOpen: boolean;
   toggleMenu: () => void;
+  onNavClick: (current: string) => void;
 }) => {
   // メニューの変化に関する変数
   const menuVariants = {
     open: { x: 0 },
     closed: { x: "-100%" },
   };
-
-  const { currentTab } = useContext(TabContext);
 
   return (
     <motion.div
@@ -35,15 +36,15 @@ const HamburgerMenu = ({
       transition={{ ease: "easeInOut", duration: 0.3 }}
     >
       <ul className="flex flex-col items-center justify-center h-full text-white font-bold">
-        {items.map(({ label, href }) => (
+        {items.map(({ label, section }) => (
           <Link
-            onClick={toggleMenu}
+            onClick={() => (toggleMenu(), onNavClick(section))}
             key={label}
             className="w-full py-4 text-center "
-            href={href}
+            href={`/#${section}`}
           >
             <li
-              className={`text-2xl ${"/#" + currentTab === href ? "text-orange" : ""}`}
+              className={`text-2xl ${currentSection === section ? "text-orange" : ""}`}
             >
               {label}
             </li>

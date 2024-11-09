@@ -7,7 +7,7 @@ import { AiFillGithub } from "react-icons/ai";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact - yuki hashimoto",
+  title: "Contact - yuki hashimoto"
 };
 
 export default function About() {

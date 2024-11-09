@@ -8,7 +8,7 @@ import Typewriter from "typewriter-effect";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hello - yuki hashimoto",
+  title: "Hello - yuki hashimoto"
 };
 
 export default function Hero() {

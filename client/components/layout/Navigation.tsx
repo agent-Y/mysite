@@ -6,7 +6,13 @@ import { useState } from "react";
 import HamburgerIcon from "./HamburgerIcon";
 import HamburgerMenu from "./HamburgerMenu";
 
-export default function Navigation() {
+export default function Navigation({
+  currentSection,
+  onNavClick,
+}: {
+  currentSection: string;
+  onNavClick: (current: string) => void;
+}) {
   // メニューの開閉に関するステート
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,7 +33,12 @@ export default function Navigation() {
       <button type="button" onClick={toggleMenu}>
         <HamburgerIcon isOpen={isOpen} />
       </button>
-      <HamburgerMenu toggleMenu={toggleMenu} isOpen={isOpen} />
+      <HamburgerMenu
+        currentSection={currentSection}
+        toggleMenu={toggleMenu}
+        isOpen={isOpen}
+        onNavClick={onNavClick}
+      />
     </nav>
   );
 }
