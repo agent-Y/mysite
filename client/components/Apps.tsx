@@ -7,7 +7,7 @@ const APPS = [
   {
     name: "セルフィッシュ",
     image: "/images/services/sel-fish.png",
-    link: "https:/www.sel-fish.com/",
+    link: "https://www.sel-fish.com/",
     description: "バス釣りに特化したポータルサイト",
   },
   {

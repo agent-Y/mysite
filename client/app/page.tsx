@@ -14,7 +14,6 @@ const SECTIONS = [
   { id: "about", component: <About />, label: "About" },
   { id: "skills", component: <Skill />, label: "Skills" },
   { id: "apps", component: <Apps />, label: "Apps" },
-  { id: "works", component: <Works />, label: "Works" },
   { id: "contact", component: <Contact />, label: "Contact" },
 ];
 
